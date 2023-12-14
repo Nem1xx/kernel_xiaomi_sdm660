@@ -251,6 +251,12 @@ calc_rate(unsigned long rate, u32 m, u32 n, u32 mode, u32 hid_div)
 		do_div(tmp, n);
 	}
 
+	if (hid_div)
+		rate = mult_frac(rate, 2, hid_div + 1);
+
+	if (mode)
+		rate = mult_frac(rate, m, n);
+
 	return tmp;
 }
 
