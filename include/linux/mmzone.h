@@ -308,6 +308,7 @@ struct zone_reclaim_stat {
 #ifndef __GENERATING_BOUNDS_H
 
 struct lruvec;
+struct mem_cgroup;
 struct page_vma_mapped_walk;
 
 #define LRU_GEN_MASK		((BIT(LRU_GEN_WIDTH) - 1) << LRU_GEN_PGOFF)
